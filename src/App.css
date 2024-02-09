@@ -1,38 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #8758ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #fff; /* Font color as white */
+  margin-bottom: 0.5rem; /* Bottom margin */
+  font-size: 1.75rem; /* Font size */
+  font-family: 'Indie Flower', cursive;
+  text-align: center; /* Align the text to the center */
+  text-transform: uppercase; /* Convert text to uppercase */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Apply a subtle text shadow */
+  /* Add any additional properties you prefer */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.TodoWrapper {
+  background: #10106a;
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.TodoForm {
+  width: 100%;
+  /* margin-bottom: 1rem; */
+}
+
+.todo-input {
+  outline: none;
+  background: none;
+  border: 1px solid #8758ff;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 300px;
+  color: #fff;
+}
+
+.todo-input::placeholder {
+  color: #ffffff4d;
+}
+
+.todo-btn {
+  background: #8758ff;
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+}
+
+.Todo {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #8758ff;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  cursor: pointer
 }
 
-.App-link {
-  color: #61dafb;
+.fa-trash {
+  margin-left: 0.75rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.incompleted {
+  color: #fff;
+  cursor: pointer;
 }
+
+.completed {
+  color: #c5aeff;
+  text-decoration: line-through;
+  cursor: pointer;
+  color: #c5aeff; /* The original color for completed tasks */
+  /*text-decoration: none; /* Remove the line-through */
+    /* Change the font color to a lighter shade */
+  color: #a99ed1; /* You can adjust the color code to the desired lighter shade */
+  cursor: pointer;
+  
+}
+
+.Todo .fa-trash,
+.Todo .fa-pen-to-square {
+  cursor: pointer;
+  transition: color 0.1s ease-in-out, text-shadow 0.1s ease-in-out;
+}
+
+.Todo .fa-trash:hover,
+.Todo .fa-pen-to-square:hover {
+  color: #8758ff; /* Change to the desired color on hover */
+  text-shadow: 0 0 5px #8758ff; /* Add a shadow effect on hover */
+}
+
+.todo-filter {
+  padding: 4px;
+  border: 1px solid #9bef;
+  border-radius: 4px;
+  background-color: #9bef;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
+  /* Additional styles can be added as needed */
+}
+
+.todo-filter:hover {
+  background-color: #9beff5;
+}
+
